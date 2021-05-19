@@ -22,6 +22,13 @@ public class Max {
     {
         System.out.println("Maximum Number is: "+m);
     }
+    /*
+    public static void main(String[] args){
+        Max genericFloat = new Max();
+        genericFloat.findMaximumFloat(5,4,3);
+    }*/
+
+
 
     /*
             Maximum Float
@@ -48,4 +55,31 @@ public class Max {
         Max genericFloat = new Max();
         genericFloat.findMaximumFloat(6.4f,2.2f,4.5f);
     }*/
+
+    /*
+            Maximum String
+    */
+
+    public static String findMaximumString(String a, String b, String c) {
+        String max;
+        max = a;
+        if (b.compareTo(max) == 1)
+            max = b;
+        if (c.compareTo(max) == 1)
+            max = c;
+        printStringMaximum(max);
+        return max;
+    }
+
+
+    public static void printStringMaximum(String m) {
+        System.out.println("Maximum String is: " + m);
+    }
+
+
+    public static void main(String[] args){
+        Max gernericString = new Max();
+        gernericString.findMaximumString("Apple","Peach","Banana");
+    }
+
 }
