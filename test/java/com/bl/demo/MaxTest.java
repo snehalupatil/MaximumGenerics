@@ -42,4 +42,12 @@ public class MaxTest {
         Assertions.assertEquals(7.8f,max);
     }
 
+    //Maximum float at Third
+    @Test
+    public void givenFloatNumber_FirstMaximum_returnMaximumNumber(){
+        Max generic = new Max();
+        Float max = generic.findMaximumFloat(4.4f,5.2f,7.8f);
+        Assertions.assertEquals(7.8f,max);
+    }
+
 }

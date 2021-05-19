@@ -2,6 +2,10 @@ package com.bl.demo;
 
 public class Max {
 
+     /*
+            Maximum Integer
+    */
+
     public static Integer findMaximumInt(Integer a, Integer b, Integer c)
     {
         Integer max;
@@ -19,7 +23,12 @@ public class Max {
         System.out.println("Maximum Number is: "+m);
     }
 
-    public static Float findMaximumFloat(Float a, Float b, Float c) {
+    /*
+            Maximum Float
+    */
+
+    public static Float findMaximumFloat(Float a, Float b, Float c)
+    {
         Float max;
         max = a;
         if (b.compareTo(max) == 1)
