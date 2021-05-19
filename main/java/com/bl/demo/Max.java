@@ -29,7 +29,8 @@ public class Max {
         printFloatMaximum(max);
         return max;
     }
-    public static void printFloatMaximum(Float m) {
+    public static void printFloatMaximum(Float m)
+    {
         System.out.println("Maximum float Number is: " + m);
     }
 
