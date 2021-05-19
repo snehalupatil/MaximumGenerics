@@ -60,7 +60,8 @@ public class Max {
             Maximum String
     */
 
-    public static String findMaximumString(String a, String b, String c) {
+    public static String findMaximumString(String a, String b, String c)
+    {
         String max;
         max = a;
         if (b.compareTo(max) == 1)
