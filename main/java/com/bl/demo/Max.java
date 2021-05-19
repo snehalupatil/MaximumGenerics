@@ -2,85 +2,19 @@ package com.bl.demo;
 
 public class Max {
 
-     /*
-            Maximum Integer
-    */
-
-    public static Integer findMaximumInt(Integer a, Integer b, Integer c)
-    {
-        Integer max;
+    public static <E extends Comparable<E>> E findMaximum(E a, E b, E c) {
+        E max;
         max = a;
-        if (b.compareTo(max) == 1)
+        if (b.compareTo(max) > 0)
             max = b;
-        if (c.compareTo(max) == 1)
+        if (c.compareTo(max) > 0)
             max = c;
         printMaximum(max);
         return max;
     }
 
-    public static void printIntMaximum(Integer m)
-    {
-        System.out.println("Maximum Number is: "+m);
-    }
-    /*
-    public static void main(String[] args){
-        Max genericFloat = new Max();
-        genericFloat.findMaximumFloat(5,4,3);
-    }*/
-
-
-
-    /*
-            Maximum Float
-    */
-
-    public static Float findMaximumFloat(Float a, Float b, Float c) {
-        Float max;
-        max = a;
-        if (b.compareTo(max) == 1)
-            max = b;
-        if (c.compareTo(max) == 1)
-            max = c;
-        printFloatMaximum(max);
-        return max;
-    }
-    public static void printFloatMaximum(Float m)
-    {
-        System.out.println("Maximum float Number is: " + m);
-    }
-
-    /*
-    public static void main(String[] args){
-        Max genericFloat = new Max();
-        genericFloat.findMaximumFloat(6.4f,2.2f,4.5f);
-    }*/
-
-    /*
-            Maximum String
-    */
-
-    public static String findMaximumString(String a, String b, String c)
-    {
-        String max;
-        max = a;
-        if (b.compareTo(max) == 1)
-            max = b;
-        if (c.compareTo(max) == 1)
-            max = c;
-        printStringMaximum(max);
-        return max;
-    }
-
-
-    public static void printStringMaximum(String m)
-    {
+    public static void printStringMaximum(String m) {
         System.out.println("Maximum String is: " + m);
     }
-
-    /*
-    public static void main(String[] args){
-        Max gernericString = new Max();
-        gernericString.findMaximumString("Apple","Peach","Banana");
-    }*/
 
 }
