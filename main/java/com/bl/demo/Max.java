@@ -2,7 +2,8 @@ package com.bl.demo;
 
 public class Max {
 
-    public static Integer findMaximum(Integer a, Integer b, Integer c){
+    public static Integer findMaximum(Integer a, Integer b, Integer c)
+    {
         Integer max;
         max = a;
         if (b.compareTo(max) == 1)
@@ -13,7 +14,8 @@ public class Max {
         return max;
     }
 
-    public static void printMaximum(Integer m){
+    public static void printMaximum(Integer m)
+    {
         System.out.println("Maximum Number is: "+m);
     }
 }
