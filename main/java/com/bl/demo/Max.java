@@ -34,8 +34,7 @@ public class Max {
             Maximum Float
     */
 
-    public static Float findMaximumFloat(Float a, Float b, Float c)
-    {
+    public static Float findMaximumFloat(Float a, Float b, Float c) {
         Float max;
         max = a;
         if (b.compareTo(max) == 1)
