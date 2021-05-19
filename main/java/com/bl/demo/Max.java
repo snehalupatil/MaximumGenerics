@@ -1,6 +1,18 @@
 package com.bl.demo;
 
-public class Max {
+public class Max<E extends Comparable<E>> {
+
+    E a, b, c;
+
+    public Max(E a, E b, E c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
+
+    public E findMaximum() {
+        return findMaximum(a, b, c);
+    }
 
     public static <E extends Comparable<E>> E findMaximum(E a, E b, E c) {
         E max;
@@ -13,8 +25,7 @@ public class Max {
         return max;
     }
 
-    public static void printStringMaximum(String m) {
-        System.out.println("Maximum String is: " + m);
+    public static <T> void printMaximum(T m) {
+        System.out.println("The Maximum is: " + m);
     }
-
 }
