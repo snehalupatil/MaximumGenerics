@@ -1,20 +1,19 @@
 package com.bl.demo;
 
 public class Max {
-    public int getMaximum(int[] intArray){
-        int max=intArray[0];
-        for(int element=1;element<intArray.length;element++){
-            max=Math.max(max,intArray[element]);
-        }
+    private static Integer max;
+    public static Integer findMaximum(Integer a, Integer b, Integer c){
+        max = a;
+        if (b.compareTo(max) == 1)
+            max = b;
+        if (c.compareTo(max) == 1)
+            max = c;
         return max;
     }
 
-    public float getMaximum(float[] floatArray){
-        float max = 0;
-        for(int element=1;element<floatArray.length;element++){
-            max=Math.max(max,floatArray[element]);
-        }
-        return max;
-
+    public static void main(String[] args){
+        Max generic = new Max();
+        Integer max = generic.findMaximum(4,3,1);
+        System.out.println("Maximum Number is: "+max);
     }
 }
