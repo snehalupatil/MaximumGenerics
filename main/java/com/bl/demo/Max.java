@@ -9,6 +9,7 @@ public class Max {
             max = b;
         if (c.compareTo(max) == 1)
             max = c;
+        printMaximum(max);
         return max;
     }
 
