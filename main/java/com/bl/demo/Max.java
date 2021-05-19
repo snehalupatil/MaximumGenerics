@@ -13,7 +13,7 @@ public class Max {
 
     public static void main(String[] args){
         Max generic = new Max();
-        Integer max = generic.findMaximum(4,3,1);
+        Integer max = generic.findMaximum(4,3,2);
         System.out.println("Maximum Number is: "+max);
     }
 }
