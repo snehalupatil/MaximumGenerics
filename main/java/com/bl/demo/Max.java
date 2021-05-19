@@ -1,8 +1,9 @@
 package com.bl.demo;
 
 public class Max {
-    private static Integer max;
+
     public static Integer findMaximum(Integer a, Integer b, Integer c){
+        Integer max;
         max = a;
         if (b.compareTo(max) == 1)
             max = b;
@@ -11,9 +12,7 @@ public class Max {
         return max;
     }
 
-    public static void main(String[] args){
-        Max generic = new Max();
-        Integer max = generic.findMaximum(4,3,2);
-        System.out.println("Maximum Number is: "+max);
+    public static void printMaximum(Integer m){
+        System.out.println("Maximum Number is: "+m);
     }
 }

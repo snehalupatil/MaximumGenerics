@@ -1,25 +1,11 @@
-package com.bl.demo;
-
-import org.junit.Assert;
-import org.junit.Before;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 
 public class MaxTest {
-    Max maxObj;
-
-    @Before
-    public void init(){
-        maxObj = new Max();
-    }
-
     @Test
-    public void testPass_WhenReturnMaximun(){
-        Assert.assertEquals(12,maxObj.getMaximum(new int[]{2,6,12}));
+    public void givenNumber_FirstMaximum_returnMaximumNumber(){
+        Max generic = new Max();
+        Integer max = generic.findMaximumInt(5,4,3);
+        Assertions.assertEquals(5,max);
     }
-
-    @Test
-    public void testPasses_ForFloat_WhenReturnsMaximum(){
-        Assert.assertEquals(10.7f, maxObject.getMaximum(new float[]{2.3f,5.2f,10.7f}),0);
-    }
-    
 }
