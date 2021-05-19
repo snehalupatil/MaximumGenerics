@@ -22,4 +22,11 @@ public class MaxTest {
         Integer max = generic.findMaximumInt(4,3,5);
         Assertions.assertEquals(5,max);
     }
+
+    @Test
+    public void givenFloatNumber_FirstMaximum_returnMaximumNumber(){
+        Max generic = new Max();
+        Float max = generic.findMaximumFloat(7.8f,4.4f,5.2f);
+        Assertions.assertEquals(7.8f,max);
+    }
 }

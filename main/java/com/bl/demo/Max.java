@@ -2,7 +2,7 @@ package com.bl.demo;
 
 public class Max {
 
-    public static Integer findMaximum(Integer a, Integer b, Integer c)
+    public static Integer findMaximumInt(Integer a, Integer b, Integer c)
     {
         Integer max;
         max = a;
@@ -33,8 +33,9 @@ public class Max {
         System.out.println("Maximum float Number is: " + m);
     }
 
+    /*
     public static void main(String[] args){
         Max genericFloat = new Max();
         genericFloat.findMaximumFloat(6.4f,2.2f,4.5f);
-    }
+    }*/
 }
