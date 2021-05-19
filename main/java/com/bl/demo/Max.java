@@ -72,14 +72,15 @@ public class Max {
     }
 
 
-    public static void printStringMaximum(String m) {
+    public static void printStringMaximum(String m)
+    {
         System.out.println("Maximum String is: " + m);
     }
 
-
+    /*
     public static void main(String[] args){
         Max gernericString = new Max();
         gernericString.findMaximumString("Apple","Peach","Banana");
-    }
+    }*/
 
 }

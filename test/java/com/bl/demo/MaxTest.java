@@ -50,4 +50,12 @@ public class MaxTest {
         Assertions.assertEquals(7.8f,max);
     }
 
+    // Maximum String at First
+    @Test
+    public void givenStringNumber_FirstMaximum_returnMaximumNumber(){
+        Max generic = new Max();
+        String max = generic.findMaximumString("Banana","Apple","Peach");
+        Assertions.assertEquals("Banana",max);
+    }
+
 }
