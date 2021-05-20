@@ -4,7 +4,8 @@ import org.junit.jupiter.api.Assertions;
 import java.util.Optional;
 
 
-public class MaxTest {
+public class MaxTest
+{
     /*
             Maximum Integer
      */

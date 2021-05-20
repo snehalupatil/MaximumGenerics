@@ -25,7 +25,9 @@ public class Max<E extends Comparable<E>> {
         return max;
     }
 
-    public static <T> void printMaximum(T m) {
-        System.out.println("The Maximum is: " + m);
+    public void printMaximum(Optional<E> max,E...elements) {
+        for (E element : elements)
+            System.out.print(element+" ");
+        System.out.println("Maximum element:" +max);
     }
 }
