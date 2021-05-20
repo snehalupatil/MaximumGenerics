@@ -1,5 +1,10 @@
 package com.bl.demo;
 
+import java.util.Optional;
+import java.util.Comparator;
+
+import static java.util.Arrays.stream;
+
 public class Max<E extends Comparable<E>> {
 
     E a, b, c;
@@ -10,18 +15,13 @@ public class Max<E extends Comparable<E>> {
         this.c = c;
     }
 
-    public E findMaximum() {
-        return findMaximum(a, b, c);
-    }
+    public Max(){}
 
-    public static <E extends Comparable<E>> E findMaximum(E a, E b, E c) {
-        E max;
-        max = a;
-        if (b.compareTo(max) > 0)
-            max = b;
-        if (c.compareTo(max) > 0)
-            max = c;
-        printMaximum(max);
+    public Optional<E> findMaximum(E...element) {
+        Optional<E> max;
+        max = stream(element).
+                sorted(Comparator.reverseOrder()).findFirst();
+        printMaximum(max,element);
         return max;
     }
 

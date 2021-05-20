@@ -1,6 +1,9 @@
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 
+import java.util.Optional;
+
+
 public class MaxTest {
     /*
             Maximum Integer
@@ -9,24 +12,24 @@ public class MaxTest {
     @Test
     public void givenNumber_FirstMaximum_returnMaximumNumber(){
         Max generic = new Max();
-        Integer max = (Integer) generic.findMaximum(5,4,3);
-        Assertions.assertEquals(5,max);
+        Optional<Integer> max = generic.findMaximum(7,4,3,5);
+        Assertions.assertEquals(Optional.of(7),max);
     }
 
     //Maximum Int at Second
     @Test
     public void givenNumber_FirstMaximum_returnMaximumNumber(){
         Max generic = new Max();
-        Integer max = (Integer) generic.findMaximum(4,5,3);
-        Assertions.assertEquals(5,max);
+        Optional<Integer> max = generic.findMaximum(4,7,3,5);
+        Assertions.assertEquals(Optional.of(7),max);
     }
 
     //Maximum Int at Third
     @Test
     public void givenNumber_FirstMaximum_returnMaximumNumber(){
         Max generic = new Max();
-        Integer max = (Integer) generic.findMaximum(4,3,5);
-        Assertions.assertEquals(5,max);
+        Optional<Integer> max = generic.findMaximum(4,3,7,5);
+        Assertions.assertEquals(Optional.of(7),max);
     }
 
     /*
@@ -37,24 +40,24 @@ public class MaxTest {
     @Test
     public void givenFloatNumber_FirstMaximum_returnMaximumNumber(){
         Max generic = new Max();
-        Float max = (Float) generic.findMaximum(7.8f,4.4f,5.2f);
-        Assertions.assertEquals(7.8f,max);
+        Optional<Float> max = generic.findMaximum(7.8,4.4,5.4,3.3);
+        Assertions.assertEquals(Optional.of(7.8),max);
     }
 
     //Maximum float at Second
     @Test
     public void givenFloatNumber_FirstMaximum_returnMaximumNumber(){
         Max generic = new Max();
-        Float max = (Float) generic.findMaximum(4.4f,7.8f,5.2f);
-        Assertions.assertEquals(7.8f,max);
+        Optional<Float> max = generic.findMaximum(4.4,7.8,5.4,3.3);
+        Assertions.assertEquals(Optional.of(7.8),max);
     }
 
     //Maximum float at Third
     @Test
     public void givenFloatNumber_FirstMaximum_returnMaximumNumber(){
         Max generic = new Max();
-        Float max = (Float) generic.findMaximum(4.4f,5.2f,7.8f);
-        Assertions.assertEquals(7.8f,max);
+        Optional<Float> max = generic.findMaximum(4.4,5.4,7.8,3.3);
+        Assertions.assertEquals(Optional.of(7.8),max);
     }
 
     /*
@@ -65,23 +68,24 @@ public class MaxTest {
     @Test
     public void givenStringNumber_FirstMaximum_returnMaximumNumber(){
         Max generic = new Max();
-        String max = (String) generic.findMaximum("Banana","Apple","Peach");
-        Assertions.assertEquals("Banana",max);
+        Optional<String> max = generic.findMaximum("Banana","Peach","Apple","Kiwi");
+        Assertions.assertEquals(Optional.of("Banana"),max);
+
     }
 
     // Maximum String at Second
     @Test
     public void givenStringNumber_FirstMaximum_returnMaximumNumber(){
         Max generic = new Max();
-        String max = (String) generic.findMaximum("Apple","Banana","Peach");
-        Assertions.assertEquals("Banana",max);
+        Optional<String> max = generic.findMaximum("Peach","Banana","Apple","Kiwi");
+        Assertions.assertEquals(Optional.of("Banana"),max);
     }
 
     // Maximum String at Third
     @Test
     public void givenStringNumber_FirstMaximum_returnMaximumNumber(){
         Max generic = new Max();
-        String max = (String) generic.findMaximum("Apple","Peach","Banana");
-        Assertions.assertEquals("Banana",max);
+        Optional<String> max = generic.findMaximum("Peach","Apple","Banana","Kiwi");
+        Assertions.assertEquals(Optional.of("Banana"),max);
     }
 }
